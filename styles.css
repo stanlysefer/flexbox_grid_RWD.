@@ -11,7 +11,7 @@
   
   body {
     font-family: "lato", sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
   /* Hacer todo el texto de los links negro y sin decoración*/
@@ -67,7 +67,7 @@
 /* Aplica el color de fondo, altura y "padding"*/
 
 .navbar {
-  background-color: (rgb(164, 255, 59)243);
+  background-color: (rgb(122, 230, 0)243);
   height: 70px;
   padding: 0 30px;
 }
@@ -92,13 +92,13 @@
 /* Cambia el color de ambos enlaces a blanco, agrega padding entre si y margen también */
 
 .navbar a {
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 9px;
   margin: 0 10px;
 }
 .showcase {
   height: 300px;
-  background-color: rgb(0, 132, 184);
+  background-color: rgba(58, 71, 185, 0.664);
 }
 
 /* Añade margen bajo el texto */
@@ -136,7 +136,7 @@
 .btn {
   border-radius: 6px;
   padding: 12px 20px;
-  background: #c56767;
+  background: #000000;
   border: none;
   margin-left: 10px;
   color: white;
@@ -199,5 +199,245 @@
   width: 800px;
 }
 .stats .fa {
-  color: purple;
+  color: rgb(4, 52, 141);
+}
+.testimonial {
+  color: black;
+  padding: 40px;
+}
+
+/* Envuelve la imagen dentro de una figura circular y define su altura para que tome todo el alto de su elemento padre */
+
+.testimonial img {
+  height: 100%;
+  clip-path: circle();
+}
+
+/* Alinea el texto al centro */
+
+.testimonial h3{
+text-align: center;
+}
+/* Crear un grid de tres columnas equidistantes. Definir un espaciado de 40px entre ellas */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+
+/* Crear una tarjeta en blanco con sombreado alrededor */
+.card {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -7px -7px 20px rgba(0, 0, 0, 0.2),
+               7px  7px 20px rgba(0, 0, 0, 0.2)
+}
+
+.circle {
+  background-color: transparent;
+  border:3px solid rgb(10, 53, 146);
+  height:90px;
+  position: relative;
+  top: -30px;
+  left: 120px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  width:90px;
+}
+
+/* Add padding around the footer as well */
+
+footer {
+  background-color: rgb(16, 13, 184);
+  padding: 20px 10px;
+}
+
+/* Sets all link texts to white and puts margin to the left and right */
+
+footer a {
+  color: white;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #9867C5;
+  border-bottom: 2px solid #9867C5;
+}
+
+/* Tablets y pantallas más pequeñas */
+
+@media(max-width: 768px){
+  .grid,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+/* Alinear todo el texto al centro. Esto moverá todo el texto, incluyendo el formulario al centro.*/
+
+.showcase {
+  height: auto;
+  text-align: center;
+}
+
+/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+*/ 
+
+.image {
+  width: 600px;
+  margin-left: 80px;
+}
+
+/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+
+.stats .flex {
+  flex-direction: column;
+}
+
+.stats {
+  text-align: center;
+}
+
+/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+
+.stat {
+  width: 100%;
+  padding-right: 80px;
+}
+
+/* Mueve el círculo al centro de la tarjeta  */
+
+.circle {
+    background-color: transparent;
+    border:3px solid purple;
+    height:90px;
+    position: relative;
+    top: -30px;
+    left: 270px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:90px;
+}/* Alinear todo el texto al centro. Esto moverá todo el texto, incluyendo el formulario al centro.*/
+
+.showcase {
+    height: auto;
+    text-align: center;
+  }
+
+/* Esto restablece el ancho del contendor de la imagen y agrega margen a la izquierda 
+*/ 
+
+.image {
+    width: 600px;
+    margin-left: 80px;
+  }
+
+/* Cambia las secciones de servicio de lado-a-lado para que cada una se posicione en una sóla linea. Centra el texto. */
+
+.stats .flex {
+    flex-direction: column;
+  }
+
+  .stats {
+    text-align: center;
+  }
+
+/* Asegura que cada sección en las estadísticas no exceda el ancho del elemento padre. */
+
+.stat {
+    width: 100%;
+    padding-right: 80px;
+  }
+
+/* Mueve el círculo al centro de la tarjeta  */
+
+.circle {
+      background-color: transparent;
+      border:3px solid purple;
+      height:90px;
+      position: relative;
+      top: -30px;
+      left: 270px;
+      border-radius:50%;
+      -moz-border-radius:50%;
+      -webkit-border-radius:50%;
+      width:90px;
+  }
+
+/* Dispositivos móviles */
+@media(max-width: 500px) {
+  .navbar {
+    height: 100px;
+  }
+
+
+/* Cambia la alineación. El logo del título se queda en la parte superior, los enlaces de navegación ahora se muestran debajo*/
+
+.navbar .flex {
+  flex-direction: column;
+}
+
+
+/* Cuando pasamos encima el ratón, retienen el texto blanco y cambia el borde a negro */
+
+.navbar a:hover {
+  color: white;
+  border-bottom: 2px solid black;
+}
+
+
+/* Establecer el color púrpura para el fondo de los enlaces de navegación, redondear las esquinas de los bordes y darle algo de espaciado*/
+
+.navbar ul {
+  background: #9867C5;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+
+/* Alinear el texto al centro */
+
+.showcase {
+  height: auto;
+  text-align: center;
+}
+
+
+/* Reducir el tamaño de la fuente */
+
+.little-info {
+  font-size: 13px;
+}
+
+
+/* Reducir el ancho de la imágen */
+
+.image {
+  width: 350px;
+  margin-left: 70px;
+}
+
+.stat {
+  margin-bottom: 40px;
+}
+
+
+/* Mover el círculo una vez más */
+
+.circle {
+    background-color: transparent;
+    border:3px solid purple;
+    height:90px;
+    position: relative;
+    top: -30px;
+    left: 150px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:90px;
+}
 }
